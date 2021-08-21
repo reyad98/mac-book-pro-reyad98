@@ -90,11 +90,12 @@ function calculateTotal() {
 function promocode() {
     const promoCode = document.getElementById('discount').value;
     if (promoCode === 'stevekaku') {
-        const afterdiscount = document.getElementById('total');
+        const afterdiscount = document.getElementById('totalPrice');
         const prevTotal = parseFloat(afterdiscount.innerText);
         const totalValue = (prevTotal * 20) / 100;
         const updateTotal = prevTotal - totalValue;
-        afterdiscount.innerText = updateTotal;
+        document.getElementById('total').innerText = updateTotal;
+    
         discount.value = '';
     }
 }
